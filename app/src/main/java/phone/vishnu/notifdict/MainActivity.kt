@@ -21,12 +21,15 @@ class MainActivity : Activity() {
                     action != Intent.ACTION_SEND)
         ) return
 
-        val word = intent.extras?.getString(Intent.EXTRA_PROCESS_TEXT, null)
+        var word = intent.extras?.getString(Intent.EXTRA_PROCESS_TEXT, null) ?:
+                            intent.extras?.getString(Intent.EXTRA_TEXT, null)
 
-        if (word == null || word.split(" ").size > 1) {
+        if (word == null) {
             quit(getString(R.string.please_select_a_single_word))
             return
         }
+
+        word = word.replace("\"", "").trim().split(" ")[0]
 
         Log.e("vishnu", "word: $word")
 

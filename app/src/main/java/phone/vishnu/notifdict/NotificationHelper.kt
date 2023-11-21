@@ -24,6 +24,7 @@ import android.content.Context
 import android.os.Build
 import android.provider.Settings
 import androidx.core.app.NotificationCompat
+import kotlin.math.min
 
 object NotificationHelper {
     fun createNotification(context: Context, word: String, meaning: String) {
@@ -37,7 +38,7 @@ object NotificationHelper {
             .setContentTitle(
                 word
             )
-            .setContentText(meaning.substring(0, 200))
+            .setContentText(meaning.substring(0, min(meaning.length, 100)))
             .setStyle(
                 NotificationCompat.BigTextStyle()
                     .bigText(meaning)
