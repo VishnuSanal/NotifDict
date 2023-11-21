@@ -26,11 +26,7 @@ import android.provider.Settings
 import androidx.core.app.NotificationCompat
 
 object NotificationHelper {
-    fun createNotification(context: Context, word: String) {
-
-//        new QuotesRepository()
-//                .getRandomQuote(
-//                        quote -> {
+    fun createNotification(context: Context, word: String, meaning: String) {
 
         val builder = NotificationCompat.Builder(
             context, Constants.NOTIFICATION_CHANNEL_ID
@@ -39,12 +35,12 @@ object NotificationHelper {
             .setAutoCancel(true)
             .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
             .setContentTitle(
-                context.getString(R.string.app_name)
+                word
             )
-            .setContentText(word)
+            .setContentText(meaning.substring(0, 200))
             .setStyle(
                 NotificationCompat.BigTextStyle()
-                    .bigText("Hello $word")
+                    .bigText(meaning)
             )
 
         val notificationManager =
@@ -66,7 +62,5 @@ object NotificationHelper {
         notificationManager.notify(
             Constants.NOTIFICATION_REQUEST_CODE, builder.build()
         )
-
-//                        });
     }
 }
