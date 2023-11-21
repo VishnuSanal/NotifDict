@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NotifDict!</string>
+    <string name="please_select_a_single_word">Please select a single word!</string>
+</resources>
