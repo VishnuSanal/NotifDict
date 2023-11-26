@@ -1,0 +1,7 @@
+NotifDict is the most simple & minimalistic dictionary you can find!
+
+You can fetch the meaning of any word from Android's context menu after selecting a text, or
+from Android's "share via" menu. NotifDict then presents you with the meaning in a heads up
+notification.
+
+NotifDict uses [dictionaryapi.dev](https://dictionaryapi.dev/) for fetching word meanings.
