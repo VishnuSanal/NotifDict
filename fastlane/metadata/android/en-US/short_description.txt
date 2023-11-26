@@ -1,1 +1,1 @@
-NotifDict is the most simple & minimalistic dictionary you can find!
+NotifDict is the simplest & most minimalistic dictionary you can find!
