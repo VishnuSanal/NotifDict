@@ -1,5 +1,5 @@
 # NotifDict
-A simple notification dictionary, nothing more, nothing less!
+NotifDict is the simplest & most minimalistic dictionary you can find!
 
 # Credits
 
