@@ -32,7 +32,7 @@ object NotificationHelper {
         val builder = NotificationCompat.Builder(
             context, Constants.NOTIFICATION_CHANNEL_ID
         )
-            .setSmallIcon(R.color.black)
+            .setSmallIcon(R.drawable.ic_icon)
             .setAutoCancel(true)
             .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
             .setContentTitle(
